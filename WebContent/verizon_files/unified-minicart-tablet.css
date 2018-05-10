@@ -1,0 +1,8 @@
+.edit{
+	border: medium none !important;
+	float: right !important;
+}
+
+.minicart-edit .remove{
+	display: none;
+}

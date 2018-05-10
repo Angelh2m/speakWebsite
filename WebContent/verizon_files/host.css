@@ -1,0 +1,737 @@
+#tcChat_Skin.tcChat {
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+iframe#inqChatStage {
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#tcChat_titleBar td {
+    border: 0 none;
+}
+
+/* email transcript main container */
+#tcChat_email{
+	background-color: #f7f7f7;
+}
+
+#tcChat_emailInput_input
+{
+	height: 30px !important;
+	position: relative;
+	top: 10px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #333333;
+}
+
+#tcChat_emailInput_bg
+{
+  	background-color: #ffffff !important;
+  	border: 1px solid #959595;
+	padding: 5px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+}
+
+#tcChat_emailInput_bg:focus
+{
+  	background-color: rgb(246, 246, 246);
+	color: #333333;
+}
+/*
+.tcChat ::-webkit-scrollbar {
+    border: none;
+    width: 2px;
+    height: 2px;
+}
+
+.tcChat ::-webkit-scrollbar-track {
+   display: none;
+}
+
+.tcChat ::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 4px;
+   border: none;
+   opacity: 0.66;
+}
+*/
+.tcChat .transcript::-webkit-scrollbar-thumb {
+  background-color: DimGray;
+}
+
+#tcChat_titleBar {
+	border-bottom: 1px solid #dbdbdb;
+	background-color: #ffffff;
+}
+
+#tcChat_ChatskinLogo {
+position: relative !important;
+}
+
+#tcChat_tcLogo {
+    background-repeat: no-repeat;
+}
+
+#tcChat_background {
+	background-color: rgba(247,247,247,0.95);
+}
+
+#tcChat_unreadText {
+	position: absolute;
+	top: -12px;
+	left: 15px;
+	background-color: #FFC0CB;
+	padding: 0 6px;
+	border-radius: 7px;
+	opacity: 0.8;
+	color: #000000;
+	font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#tcChat_unreadText > span {
+	margin-left: 13px;
+	z-index: 102;
+}
+
+#tcChat_agentText {
+    color: #000000;
+    font-family: Arial;
+    font-size: 10pt;
+    padding: 0 5px;
+	pointer-events: none;
+}
+
+#tcChat_agentText_bg{
+pointer-events: none;
+}
+
+#tcChat_liveChatText{
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+#tcChat_agentMsgCounter {
+	display: inline-block;
+	pointer-events: none;
+	background: #cd040b;
+	border-radius: 50%;
+	padding: 15px;
+	width: 30px;
+	height: 30px;
+	box-sizing: content-box;
+}
+
+#tcChat_btnRestore {
+	width: 100%;
+	background: url(btn-restore-2x.png) no-repeat top left;
+	background-size: 375px 45px;
+}
+
+#tc_chat_boxchatWindow {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+padding-bottom: 50px;  /* Gives room for systemMsg span */
+}
+
+#tcChat_chatWindow {
+	overflow-y: scroll; /* has to be scroll, not auto */
+  	-webkit-overflow-scrolling: touch;
+}
+
+.tcChat .customerId{
+	color: 	  #333333;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:   small;
+	font-weight: bold;
+}
+.tcChat .agentId{
+	color: 	  #cd040b;
+	font-family: NeueHaasGroteskDisplayBold,Arial,Helvetica,sans-serif;
+	font-size:   small; 
+}
+.tcChat .agentMsg{
+	color: 	  #333333;
+	font-family: NeueHaasGroteskText,Arial,Helvetica,sans-serif;
+	font-size:   small;
+	font-weight: normal;
+}
+.tcChat .customerMsg{
+	color: 	  #333333;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:   small;
+	font-weight: normal;
+}
+.tcChat .systemMsg{
+	color: 	  #000000;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size:   small;
+	font-style:	italic;
+	font-weight: normal;
+    margin-left: 10pt;
+	display: inherit;
+	position: relative;
+	top: 0px;
+}
+.tcChat .systemStatMsg{
+	color: 	  #000000;
+	font-family: Arial,Helvetica,sans-serif;
+    background: none repeat scroll 0 0 transparent;
+	padding: 5px;
+	font-size:   small;
+	font-weight: normal;
+	position: relative;
+	top: 0px;
+}
+
+#tcChat_chatWindow_span td  {
+	display: block;
+    position: relative;
+}
+
+#tcChat_chatWindow_span tr  {
+	display: block;
+    position: relative;
+	margin: 8px 0;
+	display: flex !important;
+}
+
+#tcChat_chatWindow_span table  {
+	table-layout: fixed;
+	width: 90%;
+	margin: 0 auto;
+	word-wrap: break-word;
+	border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+
+/* Variant : Agent Chat Bubble
+------------------------------------------ */
+
+/* creates the chat bubble */
+td.tcChat_agentLine {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 10pt;
+    position: relative;
+    width: 95%;
+	left: 0px;
+	display: block;
+	border: 1px solid #cd040b;
+	border-radius: 5px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	text-align:left;
+}
+
+/* creates the background triangle on left side*/
+td.tcChat_agentLine:before {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  left:-10px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 10px 10px 0;
+  border-color:transparent #cd040b;
+}
+
+/* creates the foreground  triangle on left side*/
+td.tcChat_agentLine:after {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  left:-9px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 10px 10px 0;
+  border-color:transparent #ffffff;
+}
+
+/* Variant : Customer Chat Bubble
+------------------------------------------ */
+
+/* creates the chat bubble */
+td.tcChat_customerLine {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 10pt;
+    position: relative;
+    width: 95%;
+	right: 0px;
+	display: block;
+	border: 1px solid #959595;
+	border-radius: 5px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	text-align:left;
+}
+
+/* creates the larger triangle */
+td.tcChat_customerLine:before {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  right:-10px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 0 10px 10px;
+  border-color:transparent #959595;
+}
+
+/* creates the smaller  triangle */
+td.tcChat_customerLine:after {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  right:-9px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 0 10px 10px;
+  border-color:transparent #ffffff;
+}
+
+#tcChat_chatFooter {
+	background-color: transparent;	
+}
+
+global.tcChat
+{
+	font-family: "Arial";
+	border-color: #92A0AD;
+}
+
+A.tcChat:hover {text-decoration: underline; color: red;}
+A.tcChat{text-decoration: underline; color: blue;}
+Body.tcChat {
+	margin: 0px 0px 0px 0px ;
+
+}
+
+#inqDivResizeCorner {
+	display: none;
+}
+
+#inqDivResizeCorner input{
+	display: none;
+	background-color: transparent!important;
+}
+
+TextArea.tcChat
+{
+  	border: none;
+  	background-color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #959595;
+	padding: 5px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+}
+
+TextArea.tcChat:focus
+{
+	color: #333333;
+	padding: 5px;
+}
+
+Table.tcChat {
+	background-color: transparent;
+}
+
+
+Div.tcChat {
+	border-style: none;
+	border-width: 0px;
+	margin: 0px 0px 0px 0px ;
+}
+
+Button.tcChat
+{
+}
+/*
+//------------------------------
+//  Application
+//------------------------------
+*/
+
+Application.tcChat
+{
+	border-style: none;
+}
+
+/*
+//------------------------------
+//  ApplicationControlBar
+//------------------------------
+*/
+/*
+ApplicationControlBar
+{
+	borderStyle: "applicationControlBar";
+	cornerRadius: 5;
+	docked: false;
+	dropShadowEnabled: true;
+	fillColors: #64809B, #64809B;
+	fillAlphas: 0.6, 0.6;
+
+	shadowDistance: 5;
+}
+*/
+
+/*
+//------------------------------
+//  HScrollBar
+//------------------------------
+*/
+
+HScrollBar.tcChat
+{
+	border-color: #B7BABC;
+}
+
+
+/*
+//------------------------------
+//  Panel
+//------------------------------
+*/
+/*
+Panel
+{
+	backgroundColor: #64809B;
+	backgroundAlpha: 0.6; // controls the alpha of the panel content area. /
+	borderAlpha: 0.6; // controls the alpha of the panel top, bottom and sides.
+	borderStyle: "solid";
+	borderThickness: "1";
+	borderColor: #234E64;
+	cornerRadius: 4;
+	dropShadowEnabled: true;
+}
+*/
+
+/*
+//------------------------------
+//  ScrollBar
+//------------------------------
+*/
+
+ScrollBar.tcChat
+{
+	border-color: #B7BABC;
+}
+
+
+
+/*
+//------------------------------
+//  TabNavigator
+//------------------------------
+*/
+
+
+
+/*
+//------------------------------
+//  VScrollBar
+//------------------------------
+*/
+
+VScrollBar.tcChat
+{
+	border-color: #B7BABC;
+
+}
+
+
+/*
+//------------------------------
+//  Window
+//------------------------------
+*/
+/*
+Window
+{
+	cornerRadius: 8;
+	borderStyle: "default";
+}
+*/
+/*
+//------------------------------
+//  .windowStatus
+//------------------------------
+
+// This empty style declaration is required to make the
+// status field of Panel/Window correctly pick up global
+// default style properties.
+*/
+
+.windowStatus
+{
+	color: #BDE9FA;
+
+}
+
+/*
+//------------------------------
+//  .windowStyles
+//------------------------------
+*/
+
+.windowStyles
+{
+	font-weight: bold;
+/*	fontSize: 12; */
+}
+
+.PerApplication
+{
+/*	backgroundSize: "100%";*/
+/*	background-image:   Embed("./Images/PER-APP-BACKGROUND.png");	*/
+}
+
+.PopApplication
+{
+	background-color: #E6E6E6;
+/*	horizontalScrollPolicy: off;
+	verticalScrollPolicy: off; */
+}
+Canvas.PerBackground
+{
+	/*background-repeat: repeat;
+	backgroundSize: "100%";
+	background-image:   Embed("./Images/PER_BACKGROUND3.png");
+    background-repeat:   repeat;
+    background-position: center;
+    background-blend:    multiply;
+ 	borderSkin:          ClassReference("com.degrafa.skins.CSSSkin");    */
+ 	border-style: none;
+ 	background-color: #FFFFFF;
+}
+Canvas.PopBackground
+{
+	border-style: none;
+}
+Canvas.PopBorderz
+{
+	border-style: none;
+}
+Canvas.PerBorderz
+{
+	border-style: none;
+}
+Canvas.PopTopMiddle
+{
+}
+Canvas.PerTopMiddle
+{
+ 	/*background-image:	Embed('./Images/PER_BM.png');*/
+}
+Canvas.PopBottomMiddle
+{
+	
+}
+Canvas.PerBottomMiddle
+{
+
+}
+Canvas.PopRightMiddle
+{
+
+}
+Canvas.PerRightMiddle
+{
+
+}
+Canvas.PopLeftMiddle
+{
+	
+}
+Canvas.PerLeftMiddle
+{
+	/*background-image:	Embed('./Images/PER_LM.png');*/
+}
+TextArea.PopTextArea
+{
+
+	border-style: none;
+}
+.PopWatermark
+{
+	border-style: none;
+}
+TextArea.PerTextArea
+{
+	border-style: none;
+}
+Button.PopBtnSend
+{
+
+}
+Button.PerBtnSend
+{
+
+}
+Button.Click2Persistent
+{
+	color: white;
+	font-family: Verdana;
+	font-size: 11;
+	text-indent: 0;
+	border: 0;
+}
+Canvas.tcChat
+{
+	color: #FFFFFF;
+}
+
+Marquee.tcChat {
+	-webkit-marquee-style: scroll;
+	marquee-style: scroll;
+	-webkit-marquee-repetition: infinite;
+	marquee-play-count: infinite;
+	overflow: -webkit-marquee;
+}
+
+#chatWindow_span > table > tbody > tr {
+	margin: 2pt 0 2pt 0;
+	display: inline-table;
+}
+
+#tcChat_txtEmailError_span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-right: 17px;
+}
+
+#tcChat_Minimized {
+    border: 0;
+    outline: 0;
+}
+
+#tcChat_txtInput_bg {
+  	border: 1px solid #959595;
+    box-sizing: initial;
+	background-color: #ffffff;
+	height: 46px !important;
+	display: block;
+	position: absolute;
+	right: 140px;
+}
+
+#tcChat_txtInput_input {
+	height: 45px !important;
+	padding: 5px 0px !important;
+}
+
+#tcChat_txtInput_input:focus {
+	padding: 5px 0px !important;
+}
+
+#tcChat_txtInput span{
+    padding: 10px 5px;
+}
+
+.tcChat * {
+    box-sizing: initial;
+    -webkit-box-sizing: initial;
+}
+
+#tcChat_btnSend_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 8px;
+	left: 30px;
+	border: none; /* added to override Verizon styling */
+}
+
+#tcChat_btnSendEmail_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 8px;
+	left: 30px;
+	border: none; /* added to override Verizon styling */
+}
+
+#tcChat_btnBackToChat img {
+	display: block;
+}
+
+#tcChat_btnBackToChat_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 8px;
+	left: 20px;
+	border: none; /* added to override Verizon styling */
+}
+
+.tcChat table,
+#inqTitleBar input,
+input#tcChat_btnFontSize_img,
+input#tcChat_btnEmail2_img,
+input#tcChat_btnMinimize_img,
+input#tcChat_minimize_img,
+input#tcChat_btnCloseChat_img,
+input#tcChat_btnChime_img,
+input#tcChat_btnBackToChat_img {
+    background-color: transparent;
+	border: none; /* added to override Verizon styling */
+}
+
+#tcChat_btnEmail2_table,
+#tcChat_btnCloseChat_table,
+#tcChat_btnMinimize_table,
+#tcChat_btnFontSize_table,
+#tcChat_btnChime_table,
+#tcChat_btnChime input {
+	border:none!important;
+	background:none!important;
+}
+
+#tcChat_btnSend_span,
+#tcChat_btnBackToChat_table,
+#tcChat_btnBackToChat_span,
+#tcChat_chatWindow_span table,
+#tcChat_btnSendEmail_span,
+#tcChat_btnBackToChat table tr td{
+	border:none!important;
+}
+.tcChat input {
+	background-image:none;
+}
+
+
+#tcChat_chatWindow_span table,
+#inqDivResizeCorner input{
+	background-color:transparent!important;
+}
+
+input#tcChat_btnChime_img {
+	padding:0px!important;
+}
+
+/* SCENE7 CSS */
+div#s7viewer_socialShare_socBtn {
+	display: none;
+}

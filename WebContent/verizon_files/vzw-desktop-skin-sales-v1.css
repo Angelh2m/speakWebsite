@@ -1,0 +1,617 @@
+@font-face {
+    font-family: 'VerizonFont';
+    src: url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.eot');
+    src: url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.eot?#iefix') format('embedded-opentype'),
+         url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.woff2') format('woff2'),
+         url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.woff') format('woff'),
+         url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.ttf') format('truetype'),
+         url('vzw-desktop-skin-care-v1/NeueHaasGroteskDisplayBold.svg#bryantregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* email transcript main container */
+#email{
+	background-color: #f7f7f7;
+}
+
+#emailInput_bg
+{
+  	border: 1px solid #959595;
+  	background-color: rgb(255, 255, 255);
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9pt;
+	color: #959595;
+	padding: 5px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+}
+
+#emailInput_input
+{
+  	background-color: rgb(255, 255, 255);
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9pt;
+	color: #959595;
+	padding: 12px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+}
+
+#emailInput_input:focus
+{
+  	background-color: rgb(246, 246, 246);
+	color: #333333;
+}
+
+global
+{
+}
+
+
+.tcChat a {
+    color: #ffef00;
+	text-decoration: underline;
+}
+
+Body {
+	margin: 0pt 0pt 0pt 0pt ;
+	text-align: left;
+}
+
+.inqTitleBar{
+	cursor: move ;
+}
+.inqDivResizeCorner{
+	cursor: se-resize ;
+}
+
+#tcChat_chatWindow_span > table {
+margin: 0 !important;
+border:none;
+width: 100%;
+}
+
+Div {
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+TextInput
+{
+	font-family: Arial, Verdana, Helvetica;
+	font-size: 0.8rem ;  
+	Resize: none;
+}
+
+
+TextInput:focus
+{
+	outline: none;
+}
+
+
+TextArea
+{
+	font-family: Arial, Verdana, Helvetica;
+	border-width: 0pt;
+	font-size: 0.8rem ; 
+	border-style: none;
+	margin: 0pt 0pt 0pt 0pt ;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	Resize: none;
+	text-align: left;
+}
+
+Div {
+	border-style: none;
+	border-width: 0pt;
+	margin: 0pt 0pt 0pt 0pt ;
+}
+
+#titleBar {
+	border-bottom: 1px solid #dbdbdb;
+	background: #ffffff;
+}
+
+
+td  {
+	display: block;
+    position: relative;
+	margin-top: 5px;
+}
+
+tr  {
+	display: block;
+    position: relative;
+	margin: 8px 0;
+	display: flex !important;
+}
+
+table  {
+	width: 90%;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+span.customerId{
+	color: 	  #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:   small;
+	font-weight: bold;
+}
+span.agentId{
+	color: 	  #cd040b;
+	font-family: 'VerizonFont', Arial, Helvetica, sans-serif;
+	font-size:   small;
+	font-weight: bold;
+}
+span.agentMsg{
+	color: 	  #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:   small;
+	font-weight: normal;
+}
+span.customerMsg{
+	color: 	  #333333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:   small;
+	font-weight: normal;
+}
+span.systemMsg{
+	color: 	  #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:   small;
+	font-style:	italic;
+	font-weight: normal;
+    margin-left: 10pt;
+	display: inherit;
+	position: relative;
+	top: 8px;
+}
+span.systemStatMsg{
+	color: 	  #000;
+	font-family: Arial, Helvetica, sans-serif;
+    background: none repeat scroll 0 0 transparent;
+	padding: 5px;
+	font-size:   small;
+	font-weight: normal;
+	position: relative;
+	top: 8px;
+}
+
+
+/* Variant : Agent Chat Bubble
+------------------------------------------ */
+
+/* creates the chat bubble */
+td.tcChat_agentLine {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 10pt;
+    position: relative;
+    width: 100%;
+	left: 0px;
+	display: block;
+	border: 1px solid #cd040b;
+	border-radius: 5px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	text-align:left;
+}
+
+/* creates the background triangle on left side*/
+td.tcChat_agentLine:before {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  left:-10px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 10px 10px 0;
+  border-color:transparent #cd040b;
+}
+
+/* creates the foreground  triangle on left side*/
+td.tcChat_agentLine:after {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  left:-9px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 10px 10px 0;
+  border-color:transparent #ffffff;
+}
+
+/* Variant : Customer Chat Bubble
+------------------------------------------ */
+
+/* creates the chat bubble */
+td.tcChat_customerLine {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 10pt;
+    position: relative;
+    width: 100%;
+	right: 0px;
+	display: block;
+	border: 1px solid #959595;
+	border-radius: 5px;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	text-align:left;
+}
+
+/* creates the larger triangle */
+td.tcChat_customerLine:before {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  right:-10px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 0 10px 10px;
+  border-color:transparent #959595;
+}
+
+/* creates the smaller  triangle */
+td.tcChat_customerLine:after {
+  display:block;
+  width:0;
+  content:"";
+  position:absolute;
+  top:32%; /* controls vertical position */
+  bottom:auto;
+  right:-9px; /* controls horizontal position */
+  border-style:solid;
+  border-width:10px 0 10px 10px;
+  border-color:transparent #ffffff;
+}
+
+Button
+{
+
+}
+
+#txtInput_input
+{
+  	border: 1px solid #959595;
+  	background-color: rgb(255, 255, 255);
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 9pt;
+	color: #959595;
+	padding: 5px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+}
+
+#txtInput_input:focus
+{
+  	background-color: rgb(246, 246, 246);
+	color: #333333;
+}
+
+Table.tcChat {
+	background-color: transparent;
+}
+
+
+/*
+//------------------------------
+//  Application
+//------------------------------
+*/
+
+Application
+{
+	border-style: none;
+}
+
+/*
+//------------------------------
+//  ApplicationControlBar
+//------------------------------
+*/
+/*
+ApplicationControlBar
+{
+	borderStyle: "applicationControlBar";
+	cornerRadius: 5;
+	docked: false;
+	dropShadowEnabled: true;
+	fillColors: #64809B, #64809B;
+	fillAlphas: 0.6, 0.6;
+
+	shadowDistance: 5;
+}
+*/
+
+/*
+//------------------------------
+//  HScrollBar
+//------------------------------
+*/
+
+HScrollBar
+{
+	border-color: #B7BABC;		
+}
+
+
+/*
+//------------------------------
+//  Panel
+//------------------------------
+*/
+/*
+Panel
+{
+	backgroundColor: #64809B;
+	backgroundAlpha: 0.6; // controls the alpha of the panel content area. /
+	borderAlpha: 0.6; // controls the alpha of the panel top, bottom and sides.
+	borderStyle: "solid";
+	borderThickness: "1";
+	borderColor: #234E64;	
+	cornerRadius: 4;
+	dropShadowEnabled: true;
+}
+*/
+
+/*
+//------------------------------
+//  ScrollBar
+//------------------------------
+*/
+
+ScrollBar
+{
+	border-color: #B7BABC;
+}
+
+
+
+/*
+//------------------------------
+//  TabNavigator
+//------------------------------
+*/
+
+
+
+/*
+//------------------------------
+//  VScrollBar
+//------------------------------
+*/
+
+VScrollBar
+{
+	border-color: #B7BABC;
+
+}
+
+
+/*
+//------------------------------
+//  Window
+//------------------------------
+*/
+/*
+Window
+{
+	cornerRadius: 8;
+	borderStyle: "default";
+}
+*/
+/*
+//------------------------------
+//  .windowStatus
+//------------------------------
+
+// This empty style declaration is required to make the
+// status field of Panel/Window correctly pick up global
+// default style properties.
+*/
+
+.windowStatus
+{
+	color: #BDE9FA;
+
+}
+
+/*
+//------------------------------
+//  .windowStyles
+//------------------------------
+*/
+
+.windowStyles
+{
+	font-weight: bold;
+/*	fontSize: 12; */
+}
+
+.PerApplication
+{
+/*	backgroundSize: "100%";*/
+/*	background-image:   Embed("./Images/PER-APP-BACKGROUND.png");	*/
+}
+
+.PopApplication
+{
+	background-color: #E6E6E6; 
+/*	horizontalScrollPolicy: off; 
+	verticalScrollPolicy: off; */	
+}
+Canvas.PerBackground
+{
+	/*background-repeat: repeat;
+	backgroundSize: "100%";
+	background-image:   Embed("./Images/PER_BACKGROUND3.png");
+    background-repeat:   repeat;
+    background-position: center;
+    background-blend:    multiply;
+ 	borderSkin:          ClassReference("com.degrafa.skins.CSSSkin");    */
+ 	border-style: none;
+ 	background-color: #FFFFFF;
+}
+Canvas.PopBackground
+{
+	border-style: none;
+}
+Canvas.PopBorderz
+{
+	border-style: none;
+}
+Canvas.PerBorderz
+{
+	border-style: none;
+}
+Canvas.PopTopMiddle
+{
+}
+Canvas.PerTopMiddle
+{
+ 	/*background-image:	Embed('./Images/PER_BM.png');*/	    			
+}
+Canvas.PopBottomMiddle
+{
+	  	 	 
+}
+Canvas.PerBottomMiddle
+{
+ 	  	 	 
+}
+Canvas.PopRightMiddle
+{
+  	 
+}
+Canvas.PerRightMiddle
+{
+ 	 
+}
+Canvas.PopLeftMiddle
+{
+	  	 
+}
+Canvas.PerLeftMiddle
+{
+	/*background-image:	Embed('./Images/PER_LM.png');*/ 	  	 
+}
+TextArea.PopTextArea
+{
+
+	border-style: none;
+}
+.PopWatermark
+{
+	border-style: none;
+}
+TextArea.PerTextArea
+{
+	border-style: none;
+}
+Button.PopBtnSend
+{
+
+}
+Button.PerBtnSend
+{
+
+}
+Button.Click2Persistent
+{
+	color: white;
+	font-family: Verdana;
+	font-size: 11;
+	text-indent: 0;
+	border: 0;
+}
+Canvas
+{
+	color: #FFFFFF;
+}
+Input
+{
+  	
+}
+
+#tc_chat_boxchatWindow::-webkit-scrollbar-track
+{
+	background-color: #e5e5e5;
+}
+
+#tc_chat_boxchatWindow::-webkit-scrollbar
+{
+	width: 8px;
+}
+
+#tc_chat_boxchatWindow::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #b7b7b7;
+}
+
+Marquee.tcChat {
+	-webkit-marquee-style: scroll;
+	marquee-style: scroll;
+	-webkit-marquee-repetition: infinite;
+	marquee-play-count: infinite;
+	overflow: -webkit-marquee;
+}
+
+#chatWindow_span > table > tbody > tr {
+	margin: 2pt 0 2pt 0;
+	display: inline-table;
+}
+
+.tcChat input {
+	border: initial;
+}
+
+#txtInput_bg {
+    box-sizing: initial;
+}
+
+#tcChat * {
+    box-sizing: initial;
+    -webkit-box-sizing: initial;
+}
+
+#btnSend_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: -7px;
+	left: 28px;
+}
+
+#btnSendEmail_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: -7px;
+	left: 28px;
+}
+
+#btnBackToChat_span {
+	font-family: VerizonFont, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: -7px;
+	left: 18px;
+}

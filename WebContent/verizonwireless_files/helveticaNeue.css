@@ -1,0 +1,15 @@
+/* Helvetica Neue */
+@font-face {
+	font-family: "HelveticaNeue";
+	src:url("/globalnav/fonts/helvetica-neue/c8356299-eb79-47d6-8d32-1ccba3aec877.eot?#iefix") format("eot"),
+      url("/globalnav/fonts/helvetica-neue/7ec25fd5-2752-4d84-b307-af3faabc21bb.woff2") format("woff2"),
+      url("/globalnav/fonts/helvetica-neue/625ebac6-edce-48a5-a1e6-9f6a677c35dc.woff") format("woff"),
+      url("/globalnav/fonts/helvetica-neue/9b74769c-91af-46ec-8b50-58564f72c5c7.ttf") format("truetype");
+}
+@font-face {
+	font-family: "HelveticaNeue-bold";
+	src:url("/globalnav/fonts/helvetica-neue/79911a74-d5aa-46bc-be05-080f813b8793.eot?#iefix") format("eot"),
+      url("/globalnav/fonts/helvetica-neue/aaa41944-25b3-4265-80b2-5564efe9b2d7.woff2") format("woff2"),
+      url("/globalnav/fonts/helvetica-neue/c1024e09-a200-4e3c-9e31-802008d9ada1.woff") format("woff"),
+      url("/globalnav/fonts/helvetica-neue/9d4076d8-bc76-4aa6-971f-a128afff6cb1.ttf") format("truetype");
+}

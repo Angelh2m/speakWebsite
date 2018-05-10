@@ -1,0 +1,1 @@
+var s_4_Integrate_DFA_get_0={"lia":410771911,"lis":2612845,"lip":217029768,"lic":96295037,"lastimptime":1525491416,"lastimp":"410771911:96295037"};
