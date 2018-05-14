@@ -2,15 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { GoogleDialogService } from '../../services/google-dialog.service';
 import { Router } from '@angular/router';
 
+interface IWindow extends Window {
+	webkitSpeechRecognition: any;
+  }
+
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styles: []
 })
+
 export class NavigationComponent implements OnInit {
 
   name: string = "Hello!!!!!"
   spokenText:string = '';
+
+  
 	
   constructor( private router:Router, public _googleDialogService: GoogleDialogService) { }
 
@@ -71,7 +79,10 @@ export class NavigationComponent implements OnInit {
 			var timeout;
 			var oldPlaceholder = null;
 			var wakeup = false;
-			var recognition = new webkitSpeechRecognition();
+			// var recognition = new webkitSpeechRecognition();
+			const {webkitSpeechRecognition} : IWindow = <IWindow>window;
+			const recognition = new webkitSpeechRecognition();
+			
 			recognition.continuous = true;
 			recognition.interimResults = true;
 	
@@ -83,7 +94,7 @@ export class NavigationComponent implements OnInit {
 				timeout = setTimeout(function() {
 					recognition.stop();
 				}, patience * 500);
-			}
+			} 
 			
 			
 	
@@ -137,10 +148,8 @@ export class NavigationComponent implements OnInit {
 			
 			let apicall = (invar) =>{
 				  console.log("inside the apicall function "+invar);
-
 				
-				
-				  var myData = {
+				var myData = {
 					queryInput:{
 						text:{
 							text: invar,
