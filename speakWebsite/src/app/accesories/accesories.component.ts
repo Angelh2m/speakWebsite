@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'speakWebsite-accesories',
+  selector: 'app-accesories',
   templateUrl: './accesories.component.html',
   styles: []
 })

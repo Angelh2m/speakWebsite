@@ -1,0 +1,36 @@
+<nav>
+    <li>
+        <a routerLink="/">home</a>
+    </li>
+    <li>
+        <a routerLink="myaccount">my Account</a>
+    </li>
+    <li>
+        <a routerLink="smartphones.html">smartphones</a>
+    </li>
+    <li>
+        <a routerLink="store-locator">storelocator</a>
+    </li>
+</nav>
+
+<div class="callout" style="position: absolute;right: 400px;top: 40px;z-index: 1000;">
+    <div class="bubble">
+        <div class="si-wrapper">
+            <textarea [(ngModel)]='spokenText' class="speech-input" style="display: block; padding-right: 25px;" placeholder="Div Multi Line" rows="10" cols="40"></textarea>
+            <button type="button" class="si-btn" style="cursor: pointer; top: 3.25px; width: 26px; height: 26px;">
+                speech input
+              
+            </button>
+            <button class="si-btn">
+                    BUTTON@
+                    <span class="si-mic">
+                        </span>
+                   
+                        <span class="si-holder">
+                        </span>
+            </button>
+        </div>
+    </div>
+    <div class="triUp"></div>
+    <dir>{{spokenText}}</dir>
+</div>

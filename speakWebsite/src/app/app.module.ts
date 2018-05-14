@@ -1,31 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// Components
+import { FormsModule } from '@angular/forms';
+
+import { APP_ROUTES } from './app.routes';
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-// Router
-import { APP_ROUTES } from './routes';
-import { SmartphonesComponent } from './smartphones/smartphones.component';
 import { AccesoriesComponent } from './accesories/accesories.component';
 import { InternationalComponent } from './international/international.component';
-import { StoreLocatorComponent } from './store-locator/store-locator.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import { SmartphonesComponent } from './smartphones/smartphones.component';
+import { StoreLocatorComponent } from './store-locator/store-locator.component';
+import { HomeComponent } from './home/home.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { GoogleDialogService } from './services/google-dialog.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SmartphonesComponent,
     AccesoriesComponent,
     InternationalComponent,
-    StoreLocatorComponent,
     MyaccountComponent,
+    SmartphonesComponent,
+    StoreLocatorComponent,
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    GoogleDialogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
