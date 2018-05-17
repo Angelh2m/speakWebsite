@@ -160,15 +160,6 @@ export class NavigationComponent implements OnInit {
 						timeZone: "America/New_York"
 					}
 				}
-			  //   console.log(myData);
-				// var Data = JSON.stringify(myData);
-				
-				
-				// let x = this._googleDialogService.getCall(Data);
-				// x.subscribe(resp =>{
-				// 	console.log(resp);
-				// });
-				
 				
 				var	url = "https://dialogflow.googleapis.com/v2/projects/vze-bot/agent/sessions/8d31966d-6930-4d74-aec3-2c3ff27fa4d0:detectIntent";
 
@@ -178,7 +169,7 @@ export class NavigationComponent implements OnInit {
 				  body: JSON.stringify(myData), // data can be `string` or {object}!
 				  headers: new Headers({
 					'Content-Type': 'application/json',
-					'Authorization': 'Bearer ya29.c.El-7Bfm909ZldcaOKKs92K1NKS0njva2jQvd5CV9Xj7_HGX6C21Xwl4MeCdLADZcfGAcLnJYR9EvcT2sH1E1wi3c6Qle4lP-trzF0z6lir83pF4OqVKzOtOwT_Kgd-7jbQ'
+					'Authorization': 'Bearer ya29.c.El--Bfci_MbxhR6VQwxwCQlP54i5WJ3c_T2vdBL-4pB58Y2sf7HxfCdUKxbxuhextorKHc2jKnLV_CwsLb2zXc5JehqJfCA9Bf0Mwv7g6yyYblKGrxtGeeMvPC3H8MPcyw'
 				  })
 				}).then(res => res.json())
 				.catch(error => console.error('Error:', error))
@@ -187,29 +178,6 @@ export class NavigationComponent implements OnInit {
 				});
 
 				  
-
-				//   $.ajax({
-				// 		type: 'POST',
-				// 		contentType: "application/json",
-				// 		dataType: "json",
-				// 		beforeSend: function (xhr) {
-				// 			xhr.setRequestHeader('Authorization', 'Bearer ya29.c.El-6BXRT_sg0cR2VWUscfVVTswjt5sBrEmgfkY1NNtjgE7GIAjhi4beCz4lsjaJdLluge2YeoHyePeTaVKk1rUkPX2ju7yMb5nf00FS3jfZ4UU0E3zYGZymRGFWC3UC6mQ');
-				// 		},
-				// 		// make sure you respect the same origin policy with this url:
-				// 		// http://en.wikipedia.org/wiki/Same_origin_policy
-				// 		data: "{\"queryInput\":{\"text\":{\"text\":\""+invar+"\",\"languageCode\":\"en\"}},\"queryParams\":{\"timeZone\":\"America/New_York\"}}",
-				// 		success: function(msg){
-				// 			//alert('wow ' + msg);
-				// 			//console.log(msg);
-				// 			//resp = jQuery.parseJSON(msg);
-				// 			//resp = eval(msg);
-				// 			//resp = JSON.stringify(msg);
-				// 			//resp = JSON.parse(msg);
-				// 			respHandle(msg);
-				// 			//console.log(eval(msg));
-				// 		}
-				// 	});
-				 
 			}
 	
 			var resp, resp2;
@@ -228,16 +196,7 @@ export class NavigationComponent implements OnInit {
 				if(intent === "smartphones_page" || intent === "accessories"){
 					fulfilmentMsg = resp2.queryResult.fulfillmentMessages;
 					agentResp1 = resp2.queryResult.fulfillmentMessages["0"].text.text["0"]
-						//   console.log( index + ": " + value );
-						//   textResp = value;
-						//   textResp = JSON.parse(fulfilmentMsg) 
-						//   console.log(textResp);
-						//   console.log("index "+index+" the text response "+textResp.text.text[0]);
-						//   if(index === 0){
-						// 	  agentResp1 = textResp.text.text[0]; 
-						//   }else if(index == 1){
-						// 	  agentResp2 = textResp.text.text[0]
-						//   }
+	
 						  console.log("redirect to smartphone page", agentResp1);
 
 						//   this.router.navigate([agentResp1]);
@@ -322,10 +281,7 @@ export class NavigationComponent implements OnInit {
 				finalTranscript = '';
 				recognition.start();
 			}, false);
-			
-			//enable the below line to listen after page load
-			//recognition.start();
-		
+
 		});
 
 	
