@@ -19,7 +19,7 @@ export class NavigationComponent implements OnInit {
   spokenText:string = '';
 
   makeCall(){
-	console.log('DONEs');
+	console.log('DONE');
 	
 	return this._googleDialogService.getCall('hello').subscribe((res)=> console.log('RESPONSE', res));
 

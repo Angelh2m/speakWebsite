@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { GoogleDialogService } from './services/google-dialog.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopComponent } from './shop/shop.component';
+import { IphoneXComponent } from './phones/iphone-x/iphone-x.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     SmartphonesComponent,
     StoreLocatorComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    ShopComponent,
+    IphoneXComponent
   ],
   imports: [
     BrowserModule,

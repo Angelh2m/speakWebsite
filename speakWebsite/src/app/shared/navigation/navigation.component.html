@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <li>
         <a routerLink="/">home</a>
     </li>
@@ -12,29 +12,199 @@
         <a routerLink="store-locator">storelocator</a>
     </li>
     <button (click)="makeCall()"> CALL</button>
-</nav>
+</nav> -->
 
 <div class="callout" style="position: absolute;right: 400px;top: 40px;z-index: 1000;">
     <div class="bubble">
         <div class="si-wrapper">
-            <textarea [(ngModel)]='spokenText' class="speech-input" style="display: block; padding-right: 25px;" placeholder="Div Multi Line" rows="10" cols="40"></textarea>
+            <textarea [(ngModel)]='spokenText' class="speech-input" style="display: block; padding-right: 25px;" placeholder="Hello! How can I help today?" rows="10" cols="40"></textarea>
             <button type="button" class="si-btn" style="cursor: pointer; top: 3.25px; width: 26px; height: 26px;">
-                speech input
+                <i class="icon-if_microphone_216335"></i>
               
             </button>
-            <button class="si-btn">
+            <!-- <button class="si-btn">
                    
                     <span class="si-mic">
                         </span>
                    
                         <span class="si-holder">
                         </span>
-            </button>
+            </button> -->
 
 
         </div>
     </div>
     <div class="triUp"></div>
-    <dir>{{spokenText}}</dir>
 
+</div>
+
+<div id="vzw-gn" role="banner" class="sticky">
+    <div><a class="header-accessibility" tabindex="0" href="/aboutus/accessibility/index.html"><span>National Accessibility Customer Service</span></a><a class="header-accessibility" tabindex="0" href="javascript:gnav.dom('#headerEnd').focus();"><span>Skip to Main Content</span></a>
+        <nav role="navigation" class="container-gnav clear-float    has-promo-ribbon">
+            <div class="promo-ribbon">
+                <div class="clearfix">
+                    <div><span class="pointer">Choose free 2-day shipping or in-store pickup.<a class="ribbonPromoInfoIcon" aria-label="Promotion.  More information tooltip." href="javascript:void(0)"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 14 14"><g fill="none" fill-rule="evenodd"><path stroke="#FFF" d="M7 .938A6.062 6.062 0 0 0 .937 7 6.062 6.062 0 0 0 7 13.063 6.062 6.062 0 0 0 13.063 7 6.062 6.062 0 0 0 7 .937z"></path><path fill="#FFF" d="M6.211 11.375V6.228h1.576v5.147zM7.789 4.503H6.21V3.09h1.576v1.414z"></path></g></svg></a></span></div>
+                </div>
+            </div>
+            <div class="sub-container-gnav">
+                <div class="logo-container">
+                    <a aria-label="Verizon Wireless homepage" routerLink="/"><img src="//ss7.vzw.com/is/image/VerizonWireless/vzw-logo-156-130-c?$pngalpha$&amp;hei=40" srcset="//ss7.vzw.com/is/image/VerizonWireless/vzw-logo-156-130-c?$pngalpha$&amp;hei=80 2x" alt=""></a>
+                </div>
+                <div class="nav-wrapper clear-float  ">
+                    <div class="nav-rule  has-promo-ribbon"></div>
+                    <div class="menu-container">
+                        <div class="main-menu">
+                            <ul class="global-nav-list">
+                                <li><a class="color_00" tabindex="0">Wireless </a></li>
+                                <li><a class="colorLightDark" href="https://www.verizon.com/?lid=//global//residential">In Home</a></li>
+                                <li class="business-wrapper"><a class="colorLightDark" tabindex="0" aria-label="business list collapsed" href="/business/">Business</a></li>
+                                <li class="close-hamburger"><button id="hamburgerMenuCloseBtn" tabindex="0" aria-label="close navigation menu"><svg focusable="false" class="close-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 18 18"><path fill="#000" fill-rule="nonzero" d="M17.272 1.522l-.794-.794L9 8.205 1.522.728l-.794.794L8.205 9 .728 16.478l.794.794L9 9.795l7.478 7.477.794-.794L9.795 9z"></path></svg></button></li>
+                            </ul>
+                        </div>
+                        <div class="links-menu ">
+                            <ul class="global-nav-list menubar">
+                                <li aria-label="Phones collapsed"><a class="" href="/smartphones/">Phones</a>
+                                    <div class="global-nav-lower position-submenu clear-float ">
+                                        <div class="sub-global-nav-lower">
+                                            <div class="lower-right  ">
+                                                <div role="button" tabindex="0" class="mobile-back"><span class="back-carat"></span>Back</div>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/smartphones/">Smartphones</a></li>
+                                                    <li><a class="" href="/basic-phones/">Basic Phones</a></li>
+                                                    <li><a class="" href="/devices/certified-pre-owned/">Certified Pre-owned</a></li>
+                                                    <li><a class="" href="/smartphones/prepaid/">Prepaid Phones</a></li>
+                                                    <li><a class="" href="/bring-your-own-device/">Bring your own device</a></li>
+                                                    <li><a class="" href="/od/trade-in/">Trade in your phone</a></li>
+                                                    <li><a class="" href="/accessories/">Phone Accessories</a></li>
+                                                </ul>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/smartphones/samsung-galaxy-s9-plus/">Galaxy S9 Plus</a></li>
+                                                    <li><a class="" href="/smartphones/samsung-galaxy-s9/">Galaxy S9</a></li>
+                                                    <li><a class="" href="/smartphones/apple-iphone-x/">iPhone X</a></li>
+                                                    <li><a class="" href="/smartphones/apple-iphone-8/#sku=sku2990115">iPhone 8 (Product) Red Special Edition</a></li>
+                                                    <li><a class="" href="/smartphones/apple-iphone-8-plus/#sku=sku2990112">iPhone 8 Plus (Product) Red Special Edition</a></li>
+                                                    <li><a class="" href="/smartphones/samsung-galaxy-note-8/">Galaxy Note8</a></li>
+                                                    <li><a class="" href="/smartphones/google-pixel-2/">Google Pixel 2</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li aria-label="Plans collapsed"><a class="" href="/plans/verizon-plan/">Plans</a>
+                                    <div class="global-nav-lower position-submenu clear-float ">
+                                        <div class="sub-global-nav-lower">
+                                            <div class="lower-right  ">
+                                                <div role="button" tabindex="0" class="mobile-back"><span class="back-carat"></span>Back</div>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/plans/verizon-plan/">Unlimited</a></li>
+                                                    <li><a class="" href="/plans/verizon-plan/#verizon-plan">The Verizon Plan</a></li>
+                                                    <li><a class="" href="/prepaid/">Prepaid Plans</a></li>
+                                                    <li><a class="" href="/solutions-and-services/international/">International Services</a></li>
+                                                </ul>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/plans/data-only-plan/">Data only plan</a></li>
+                                                    <li><a class="" href="/plans/single-device-plan/">Single Device Plans</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li aria-label="Deals collapsed"><a class="" href="/deals-landing/">Deals</a>
+                                    <div class="global-nav-lower position-submenu clear-float ">
+                                        <div class="sub-global-nav-lower">
+                                            <div class="lower-right  ">
+                                                <div role="button" tabindex="0" class="mobile-back"><span class="back-carat"></span>Back</div>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/deals-landing/">Shop Deals</a></li>
+                                                    <li><a class="" href="/rewards/verizon-up/">Verizon Up</a></li>
+                                                    <li><a class="" href="/accessories/sale/">Accessory Deals</a></li>
+                                                    <li><a class="" href="/military/">Military</a></li>
+                                                    <li><a class="" href="/discount-program/">Employee discount</a></li>
+                                                    <li><a class="" href="/promos/verizon-fios-installation-promo/ ">Verizon Fios discounts</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li aria-label="Shop collapsed"><a class="" href="/featured/shop-phones-devices/">Shop</a>
+                                    <div class="global-nav-lower position-submenu clear-float ">
+                                        <div class="sub-global-nav-lower">
+                                            <div class="lower-right  ">
+                                                <div role="button" tabindex="0" class="mobile-back"><span class="back-carat"></span>Back</div>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/smartphones/">Smartphones</a></li>
+                                                    <li><a class="" href="/accessories/">Accessories </a></li>
+                                                    <li><a class="" href="/tech-store/">Tech Store</a></li>
+                                                    <li><a class="" href="/tablets/">Tablets </a></li>
+                                                    <li><a class="" href="/audio/">Audio</a></li>
+                                                    <li><a class="" href="/accessories/cases-and-protection/">Cases &amp; Protection</a></li>
+                                                    <li><a class="" href="/internet-devices/">Jetpack &amp; Hotspots</a></li>
+                                                    <li><a class="" href="/wearable-tech/">Wearable Tech</a></li>
+                                                    <li><a class="" href="/car-and-travel/">Car &amp; Travel </a></li>
+                                                    <li><a class="" href="/smart-home/">Smart Home</a></li>
+                                                    <li><a class="" href="/family-tech/">Family Tech</a></li>
+                                                </ul>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/accessories/smart-watches/apple/">Apple Watch Series 3</a></li>
+                                                    <li><a class="" href="/tablets/ipad-9-7/">iPad</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li aria-label="Support collapsed"><a class="" href="/support/">Support</a>
+                                    <div class="global-nav-lower position-submenu clear-float ">
+                                        <div class="sub-global-nav-lower">
+                                            <div class="lower-right  ">
+                                                <div role="button" tabindex="0" class="mobile-back"><span class="back-carat"></span>Back</div>
+                                                <ul class="gnav-submenu-list">
+                                                    <li><a class="" href="/support/plans/">Plans</a></li>
+                                                    <li><a class="" href="/support/phones-and-devices/">Device</a></li>
+                                                    <li><a class="" href="/solutions-and-services/total-mobile-protection/">Device Insurance</a></li>
+                                                    <li><a class="" href="/support/services-and-apps/">Apps and other services</a></li>
+                                                    <li><a class="" href="/support/billing-and-payments/">Account and billing</a></li>
+                                                    <li><a class="" href="https://community.verizonwireless.com/welcome">Community forums</a></li>
+                                                    <li><a class="" href="/vzw/ordertracking/index.jsp">Order status</a></li>
+                                                    <li><a class="" href="/support/contact-us/">Contact Us</a></li>
+                                                    <li><a class="" href="/support/contact-us/#LiveChat">Live Chat </a></li>
+                                                    <li><a class="" href="/support/smart-setup/">Smart Setup</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-tools-container">
+                        <ul class="global-nav-list search-cart">
+                            <li class="stores-option"><a href="/stores/">Stores</a></li>
+                            <li class="search-container">
+                                <form action="/search/vzwSearch"><label for="navPhoneSearch" class="hidden-label">search</label><input class="search " type="text" name="Ntt" id="navPhoneSearch" placeholder="Search" autocomplete="off"><span class="search-icon" tabindex="-1"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 18 18"><path fill="#000" fill-rule="nonzero" d="M17.896 17.101l-5.995-5.994A6.721 6.721 0 0 0 13.5 6.75a6.75 6.75 0 1 0-6.75 6.75c1.661 0 3.18-.603 4.356-1.598l5.995 5.995.795-.796zM6.75 12.375A5.63 5.63 0 0 1 1.125 6.75 5.63 5.63 0 0 1 6.75 1.125a5.63 5.63 0 0 1 5.625 5.625 5.63 5.63 0 0 1-5.625 5.625z"></path></svg></span></form>
+                            </li>
+                            <li class="close-search"><span class="search-loader ">Loading</span><button id="gnavCloseSearch" aria-label="close search" class=""><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 18 18"><path fill="#000" fill-rule="nonzero" d="M17.272 1.522l-.794-.794L9 8.205 1.522.728l-.794.794L8.205 9 .728 16.478l.794.794L9 9.795l7.478 7.477.794-.794L9.795 9z"></path></svg></button></li>
+                            <li class="floatRightMobile cart-icon-wrapper"><a class="cart-icon " aria-label="Cart, 0 items" href="/vzw/cart/cart.jsp"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" style="overflow: visible;"><g fill="none" fill-rule="evenodd"><path fill="#020303" d="M11.354 13.875H.838v-8.99h1.845v1.45h.839v-1.45h5.15v1.45h.837v-1.45h1.845v8.99zM3.522 3.285c0-.794.641-1.439 1.433-1.447h2.283c.791.008 1.433.653 1.433 1.446v.763h-5.15v-.763zm7.14.762H9.51v-.763A2.285 2.285 0 0 0 7.24 1H4.954a2.285 2.285 0 0 0-2.272 2.284v.763H0v10.667h12.192V4.047h-1.53z"></path></g></svg></a></li>
+                            <li class="menu-icon">
+                                <div class="" tabindex="0" role="button" aria-label="open navigation menu">
+                                    <div></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="global-nav-list language-account">
+                            <li class="account-username-icon floatRightMobile"><span tabindex="0" role="button" aria-label="open sign in overlay">Sign In</span></li>
+                            <li class="language-selector"><a class="" href="https://es.verizonwireless.com/b2c/index.html">Español</a></li>
+                            <li class="account-container "><a href="javascript:void(0)" id="gnavAccountMenu" class="" aria-label="Sign in collapsed"><span>Sign In</span></a>
+                                <ul>
+                                    <li><a href="/my-verizon/">My Account</a></li>
+                                    <li><a href="https://login.verizonwireless.com/accessmanager/public/c/reg/start?next_e= ">Register</a></li>
+                                    <li><a href="/solutions-and-services/my-verizon-mobile/">Mobile App</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="sticky-spacer  has-promo-ribbon" id="headerEnd" tabindex="-1"></div>
+    </div>
 </div>

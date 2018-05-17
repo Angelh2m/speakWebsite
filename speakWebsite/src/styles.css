@@ -1,27 +1,249 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('./assets/fonts/icomoon.eot?x67qog');
+    src: url('./assets/fonts/icomoon.eot');
+    src: url('./assets/fonts/icomoon.eot?x67qog#iefix') format('embedded-opentype'), url('./assets/fonts/icomoon.ttf?x67qog') format('truetype'), url('./assets/fonts/icomoon.woff?x67qog') format('woff'), url('./assets/fonts/icomoon.svg?x67qog#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-if_microphone_216335:before {
+    content: "\e900";
+}
+
+.icon-feed:before {
+    content: "\e91d";
+}
+
+.icon-mic:before {
+    content: "\e91e";
+}
+
+#newHeroBanner1 .first {
+    background: url('./assets/header.jpeg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.branding.section {
+    background: url('./assets/sencondhead.jpeg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.section2 {
+    background: url('./assets/vzw-military-hp-module-d-04242018.jpeg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.section3 .d-img-size-cover {
+    background: url('./assets/phoneup.jpeg');
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+
+/* .shop-phones-grid-heading {
+    height: 100%;
+} */
+
+.promotional-container .swiper-wrapper {
+    width: 50%;
+}
+
+.phone-tile-col .swiper-slide {
+    float: left;
+    width: 33% !important;
+}
+
+
+/* .shop-phones-grid-heading a {
+    background: url('./assets/GOOGLE_Taiman_Blk.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+} */
+
+.shop-phones-image-framea a {
+    background: url('./assets/GOOGLE_Taiman_Blk.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-module-container {
+    background: url('./assets/vzw-hp-module-network-d-09292017.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.canary::before {
+    background: url('./assets/vzw-hp-techstore-canary-d-05072018.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+.fitbit::before {
+    background: url('./assets/vzw-hp-techstore-fitbit-d-05072018.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+.beats::before {
+    background: url('./assets/vzw-hp-techstore-beats-d-05072018.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+.bose::before {
+    background: url('./assets/vzw-hp-techstore-bose-d-05072018.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+}
+
+.callout {
+    position: fixed !important;
+    z-index: 999999999!important;
+    right: 0!important;
+    top: 16rem!important;
+    right: 1rem!important;
+}
+
+.speech-input {
+    display: inline-block;
+    padding-right: 25px;
+    height: 85px;
+    border-radius: 48px;
+    padding: 20px 35px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    border: solid 0;
+    background-color: #353456;
+    color: white !important;
+}
+
+.speech-input:focus {
+    outline: 0px !important;
+}
+
+textarea {
+    color: white!important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+}
+
+textarea:-ms-input-placeholder {
+    color: #fff;
+}
+
+.si-btn {
+    position: absolute;
+    right: 3rem;
+    top: 1.7rem !important;
+    background-color: transparent !important;
+    border: solid 1px white!important;
+    border-radius: 50%!important;
+    height: 5rem!important;
+    width: 5rem!important;
+    transition: all 1.5s;
+}
+
+.si-wrapper:before {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    position: absolute;
+    content: '';
+    padding: 2rem;
+    width: 105%;
+    height: 100%;
+    z-index: -9;
+    padding: 15px;
+    height: 10rem;
+    margin-top: -8px;
+    border-radius: 54px;
+    margin-left: -8px;
+}
+
+.icon-if_microphone_216335 {
+    color: white;
+    font-size: 2.5rem;
+    transition: all .5s;
+}
+
+.si-btn:hover {
+    background-color: white !important;
+}
+
+.si-btn:hover .icon-if_microphone_216335 {
+    color: black !important;
+}
+
+.microphone {
+    content: url(./assets/microphone.svg);
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
 .responsive {
     width: 100%;
-    height: 100%;
-}
-
-nav {
-    position: absolute;
-    /* top: 20%; */
-}
-
-li {
-    display: inline;
-    margin-left: 1rem;
-    font-size: .8rem;
-    background-color: white;
-    padding: 6px;
-}
-
-a:visited {
-    color: black;
-}
-
-.si-wrapper {
-    float: right;
-    position: fixed;
-    right: 0;
+    margin-top: -21rem;
 }
