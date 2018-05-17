@@ -18,6 +18,12 @@ export class NavigationComponent implements OnInit {
   name: string = "Hello!!!!!"
   spokenText:string = '';
 
+  makeCall(){
+	console.log('DONEs');
+	
+	return this._googleDialogService.getCall('hello').subscribe((res)=> console.log('RESPONSE', res));
+
+  }
   
 	
   constructor( private router:Router, public _googleDialogService: GoogleDialogService) { }
@@ -96,8 +102,6 @@ export class NavigationComponent implements OnInit {
 				}, patience * 500);
 			} 
 			
-			
-	
 			recognition.onstart = () => {
 				oldPlaceholder = inputEl.placeholder;
 				inputEl.placeholder = inputEl.dataset.ready || talkMsg;

@@ -11,6 +11,7 @@
     <li>
         <a routerLink="store-locator">storelocator</a>
     </li>
+    <button (click)="makeCall()"> CALL</button>
 </nav>
 
 <div class="callout" style="position: absolute;right: 400px;top: 40px;z-index: 1000;">
@@ -22,15 +23,18 @@
               
             </button>
             <button class="si-btn">
-                    BUTTON@
+                   
                     <span class="si-mic">
                         </span>
                    
                         <span class="si-holder">
                         </span>
             </button>
+
+
         </div>
     </div>
     <div class="triUp"></div>
     <dir>{{spokenText}}</dir>
+
 </div>
