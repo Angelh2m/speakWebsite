@@ -16,6 +16,15 @@ import { GoogleDialogService } from './services/google-dialog.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopComponent } from './shop/shop.component';
 import { IphoneXComponent } from './phones/iphone-x/iphone-x.component';
+import { SamsungGalaxyComponent } from './phones/samsung-galaxy/samsung-galaxy.component';
+import { GooglePixelComponent } from './phones/google-pixel/google-pixel.component';
+import { PlansComponent } from './plans/plans.component';
+import { DealsComponent } from './deals/deals.component';
+import { SupportComponent } from './support/support.component';
+import { CanaryFlexHdSecurityCameraComponent } from './canary-flex-hd-security-camera/canary-flex-hd-security-camera.component';
+import { FitbitComponent } from './fitbit/fitbit.component';
+import { BeatsByDreComponent } from './beats-by-dre/beats-by-dre.component';
+import { BoseComponent } from './bose/bose.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,16 @@ import { IphoneXComponent } from './phones/iphone-x/iphone-x.component';
     HomeComponent,
     NavigationComponent,
     ShopComponent,
-    IphoneXComponent
+    IphoneXComponent,
+    SamsungGalaxyComponent,
+    GooglePixelComponent,
+    PlansComponent,
+    DealsComponent,
+    SupportComponent,
+    CanaryFlexHdSecurityCameraComponent,
+    FitbitComponent,
+    BeatsByDreComponent,
+    BoseComponent
   ],
   imports: [
     BrowserModule,

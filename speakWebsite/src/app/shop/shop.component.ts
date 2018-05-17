@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ShopComponent implements OnInit {
 
 
-    header: string = '../../assets/header.jpeg';
+  img: string = '../../assets/shop.png';
 
 
   constructor() { }

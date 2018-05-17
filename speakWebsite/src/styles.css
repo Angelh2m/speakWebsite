@@ -167,6 +167,8 @@
     border: solid 0;
     background-color: #353456;
     color: white !important;
+    padding-right: 8.4rem !important;
+    width: 360px;
 }
 
 .speech-input:focus {
@@ -197,7 +199,7 @@ textarea:-ms-input-placeholder {
 
 .si-btn {
     position: absolute;
-    right: 3rem;
+    right: 2rem;
     top: 1.7rem !important;
     background-color: transparent !important;
     border: solid 1px white!important;

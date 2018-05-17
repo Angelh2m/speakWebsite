@@ -6,9 +6,18 @@ import { InternationalComponent } from './international/international.component'
 import { StoreLocatorComponent } from './store-locator/store-locator.component';
 import { ShopComponent } from './shop/shop.component';
 import { IphoneXComponent } from "./phones/iphone-x/iphone-x.component";
+import { SamsungGalaxyComponent } from "./phones/samsung-galaxy/samsung-galaxy.component";
+import { GooglePixelComponent } from './phones/google-pixel/google-pixel.component';
+import { PlansComponent } from './plans/plans.component';
+import { DealsComponent } from './deals/deals.component';
+import { SupportComponent } from './support/support.component';
+import { CanaryFlexHdSecurityCameraComponent } from './canary-flex-hd-security-camera/canary-flex-hd-security-camera.component';
+import { FitbitComponent } from './fitbit/fitbit.component';
+import { BeatsByDreComponent } from './beats-by-dre/beats-by-dre.component';
+import { BoseComponent } from './bose/bose.component';
 
 const appRoutes: Routes = [
-    { path: '', component: ShopComponent},
+    { path: '', component: HomeComponent},
     { path: 'smartphones', component: SmartphonesComponent},
     { path: 'myaccount', component: MyaccountComponent},
     { path: 'international', component: InternationalComponent},
@@ -16,6 +25,15 @@ const appRoutes: Routes = [
     { path: 'accessories', component: StoreLocatorComponent},
     { path: 'shop', component: ShopComponent},
     { path: 'iphone-x', component: IphoneXComponent},
+    { path: 'samsung-galaxy', component: SamsungGalaxyComponent},
+    { path: 'google-pixel', component: GooglePixelComponent},
+    { path: 'phone-plans', component: PlansComponent},
+    { path: 'deals', component: DealsComponent},
+    { path: 'support', component: SupportComponent},
+    { path: 'canary-flex-hd-security-camera', component: CanaryFlexHdSecurityCameraComponent},
+    { path: 'fitbit', component: FitbitComponent},
+    { path: 'beats-by-dre', component: BeatsByDreComponent},
+    { path: 'bose', component: BoseComponent},
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(appRoutes, {useHash: false});
