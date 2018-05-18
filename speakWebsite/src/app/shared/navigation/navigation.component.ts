@@ -8,7 +8,6 @@ interface IWindow extends Window {
 	webkitSpeechRecognition: any;
 }
 
-
 @Component({
 	selector: 'app-navigation',
 	templateUrl: './navigation.component.html',
@@ -22,11 +21,7 @@ export class NavigationComponent implements OnInit {
 	refreshedToken: any = 'ya29.c.Elq_BewclRdCAfCUTe1YTIAWRvGFn_vNuCcAKCpFqBXlPLK6w63b68GA1hHlR2QteGP6d5iKmQtUATiN1qVfroCH__LBHziQBVYK08jBSJr_MCAbevTtRMobKus';
 	listening: boolean = false;
 	errorToken: boolean = true;
-
-	//   getToken(){
-	// 	return this._googleDialogService.getToken()
-	// 		.subscribe((token)=> console.log(token))
-	//   }
+	firstLog = false;
 
 
 	constructor(private router: Router, public _googleDialogService: GoogleDialogService) { }
@@ -96,9 +91,7 @@ export class NavigationComponent implements OnInit {
 			var allValidPaths = this.router.config.map( (el, index ,arr) =>{
 				return el.path
 			});
-			// .filter( (el) => el.length > 0 );
-			// console.table(allValidPaths);
-			// console.log(allValidPaths);
+
 			
 
 			recognition.continuous = true;
@@ -147,7 +140,6 @@ export class NavigationComponent implements OnInit {
 					return intent.indexOf(event) !== -1
 				})
 				var indexNew = allValidPaths.indexOf(intent)
-				// console.log('Path:   ', gettingTheFullPath, " ++  ", foundIndex, " ++ ", allValidPaths[foundIndex]);
 				
 				recognizing = false;
 				clearTimeout(timeout);
@@ -162,31 +154,24 @@ export class NavigationComponent implements OnInit {
 				}
 
 				if (transcript.toUpperCase() === "SCROLL DOWN") {
-					console.log("SCROLL DOWN");
 					wakeup = true;
-					window.scrollBy(0, 500);
+					window.scrollBy(0, 1100);
 					return
 				}
 
 				if (transcript.toUpperCase() === "SCROLL UP") {
-					console.log("GO BACK");
 					wakeup = true;
-					window.scrollBy(0, -900);
+					window.scrollBy(0, -1100);
 					return
 				}
 
 				if (transcript.toUpperCase() === "GO BACK") {
-					console.log("GO BACK");
 					wakeup = true;
 					window.history.back();
 					return
 				} 
 
-				// var mainIntent = transcript.toUpperCase() === "HELLO"
-
 				apicall(inputEl.value);
-
-
 
 			};
 
@@ -220,7 +205,7 @@ export class NavigationComponent implements OnInit {
 					})
 					.then(function(myJson) {
 						TOKEN = myJson.token;
-						console.log("Here is the token ",TOKEN);
+						// console.log("Token ",TOKEN);
 						apiCallToGoogleDialog(myJson.token.body);
 						return myJson.token.body
 					});
@@ -268,39 +253,41 @@ export class NavigationComponent implements OnInit {
 			var intent;
 			var agentResp1, agentResp2, errormessage;
 
+
 			let respHandle = (agentResp) => {
-				//resp = JSON.parse(agentResp);
+
 				resp2 = eval(agentResp);
-				//console.log(resp);
-				console.log('THE RESPONSE!', resp2);
+				// console.log('THE RESPONSE!', resp2);
 				intent = resp2.queryResult.intent.displayName;
 		
 				if (intent === "smartphones_page" 
 				|| intent === "accessories"
 				|| intent === "homepage" 
+				|| intent === "iphonex" 
+				|| intent === "samsung-galaxy" 
+				|| intent === "fitbit" 
+				|| intent === "shop" 
 				|| intent === "my_account" 
 				|| intent === "login") {
-					
+
 					fulfilmentMsg = resp2.queryResult.fulfillmentMessages;
 					agentResp1 = resp2.queryResult.fulfillmentMessages["0"].text.text["0"];
-					
-					console.log('INTENT::::>> ', agentResp1);
-					window.location.href = "http://localhost:4200/" + agentResp1;
 
-					console.log("redirect to smartphone page", agentResp1);
+					if (this.firstLog == false && intent == 'my_account' ) {
+						// localStorage.setItem('login', 'true');
+						agentResp1 = 'login';
+						this.firstLog = true;
+					}
+					
+					window.location.href = "http://localhost:4200/" + agentResp1;
 					//   this.router.navigate([agentResp1]);
 					// window.location.href = "http://localhost:4200/" + agentResp1;
 
 				} else {
 					fulfilmentMsg = resp2.queryResult.fulfillmentMessages;
 					[].forEach.call(fulfilmentMsg, function (index, value) {
-						console.log(index + ": " + value);
 						textResp = eval(value);
-						console.log(textResp);
-						//   console.log("index "+index+" the text response "+textResp.text.text[0]);
-						//   errormessage = textResp.text.text[0];
 						inputEl.value = ' ';
-
 					});
 				}
 

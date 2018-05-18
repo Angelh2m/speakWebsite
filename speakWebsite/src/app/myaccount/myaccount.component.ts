@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyaccountComponent implements OnInit {
 
-  img = '../../assets/myaccount.png';
+  img = '../../assets/myaccountL.png';
 
 
   constructor() { }

@@ -11,6 +11,8 @@ export class IphoneXComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    this.img = '../../assets/iphone-x.png';
   }
 
 }
