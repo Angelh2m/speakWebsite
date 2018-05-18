@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class AccesoriesComponent implements OnInit {
+  img: string = '../../assets/accesories.png';
 
   constructor() { }
 

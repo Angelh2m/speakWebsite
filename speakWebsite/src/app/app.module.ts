@@ -25,6 +25,7 @@ import { CanaryFlexHdSecurityCameraComponent } from './canary-flex-hd-security-c
 import { FitbitComponent } from './fitbit/fitbit.component';
 import { BeatsByDreComponent } from './beats-by-dre/beats-by-dre.component';
 import { BoseComponent } from './bose/bose.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { BoseComponent } from './bose/bose.component';
     CanaryFlexHdSecurityCameraComponent,
     FitbitComponent,
     BeatsByDreComponent,
-    BoseComponent
+    BoseComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

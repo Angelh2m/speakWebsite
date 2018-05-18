@@ -15,14 +15,17 @@ import { CanaryFlexHdSecurityCameraComponent } from './canary-flex-hd-security-c
 import { FitbitComponent } from './fitbit/fitbit.component';
 import { BeatsByDreComponent } from './beats-by-dre/beats-by-dre.component';
 import { BoseComponent } from './bose/bose.component';
+import { AccesoriesComponent } from './accesories/accesories.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'smartphones', component: SmartphonesComponent},
     { path: 'myaccount', component: MyaccountComponent},
+    { path: 'login', component: LoginComponent},
     { path: 'international', component: InternationalComponent},
     { path: 'store-locator', component: StoreLocatorComponent},
-    { path: 'accessories', component: StoreLocatorComponent},
+    { path: 'accessories', component: AccesoriesComponent},
     { path: 'shop', component: ShopComponent},
     { path: 'iphone-x', component: IphoneXComponent},
     { path: 'samsung-galaxy', component: SamsungGalaxyComponent},

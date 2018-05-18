@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders }from "@angular/common/http";
-// import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GoogleDialogService {
   response: any[] = [];
-  token: string = 'ya29.c.El-7BVxHBhdLA51Wo_fF19yuEPfLTU51ROR_knyOw6yuDEWhWKtbj_2E2c_7kmwchtX_MTTFN5-Lj2T2gn9W8BPJpZoNjNBbsU-LdRUvs3kUImCVHqGsX8caxK_47XttFw';
-  URL:string = 'http://localhost:3000/getToken';
+  token: string = 'ya29.c.Elq_BYW95UDO8zXVxYsa6fBpZuQnm0TudPtlaYU-Ck5oDF9aOH0ecehQsurCJFTfnnO6JrIqeSLzCB3_2f_6PzQRu2nm8mITnMKyuwhd8JrNPy-TGsny8lCwQ5A';
+  URL:string = 'https://dialogflow.googleapis.com/v2/projects/vze-bot/agent/sessions/8d31966d-6930-4d74-aec3-2c3ff27fa4d0:detectIntent';
   constructor(public http: HttpClient) { }
+
+  serviceToken: any = '';
 
   private getHeaders(): HttpHeaders{
     let headers = new HttpHeaders({
@@ -18,18 +20,16 @@ export class GoogleDialogService {
     return headers
   }
 
-  getCall(myData: string){
-    // let url: "https://dialogflow.googleapis.com/v2/projects/vze-bot/agent/sessions/8d31966d-6930-4d74-aec3-2c3ff27fa4d0:detectIntent";
-    let url = this.URL;
-    let data = myData;
-    let headers = new HttpHeaders({
-      'authorization': `Bearer ${this.token}`,
-      'queryInput' : myData
-    });
+  getToken(){
 
-    console.log(headers);
+    let url = 'http://localhost:3000/getFreshToken';
 
-    return this.http.post(url, {headers})
+    return this.http.get(url)
+      .map( (resp: any) =>{
+        console.log('TOKEN FROM EXPRESS', resp.token.body);
+        return resp.token.body
+      })
+
   }
 
 }
